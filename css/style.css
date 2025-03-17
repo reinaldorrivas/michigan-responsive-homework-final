@@ -1,0 +1,148 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Sour Gummy", serif;
+  font-optical-sizing: auto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: #dedede;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Ribeye Marrow", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6.5rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+p {
+  font-size: 2.5rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+ * Main content
+ */
+
+.main-content {
+  padding: 0 20px;
+}
+
+/*
+ * Homework Description
+ */
+
+.homework-description {
+  margin-bottom: 5rem;
+}
+
+/*
+ * Images Section
+ */
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 772px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .images .image-container,
+  .images .image-container .image-container__image {
+    border-radius: 50%;
+  }
+
+  .md-take-all-space {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 998px) {
+  .images .image-container,
+  .images .image-container .image-container__image {
+    border-radius: 0;
+  }
+
+  .lg-take-all-space {
+    grid-column: 1 / 3;
+  }
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid gray 1px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .image-container {
+    background-color: black;
+    color: yellow;
+  }
+}
+
+.image-container__image {
+  aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 772px) {
+  .image-container__image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (min-width: 998px) {
+  .image-container__image {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.image-container__description {
+  text-align: center;
+}
+
+/*
+ * Main Footer
+ */
+
+.main-footer {
+  margin: 2.5rem 0;
+  padding: 0 20px;
+}
